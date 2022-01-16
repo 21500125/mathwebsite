@@ -43,146 +43,187 @@ Publish the website in the given URL.
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volume</title>
+    <title>Mathematical Calculation</title>
     <style>
         * {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-body {
-  background-color:rgb(133, 125, 245);
-}
-.container {
-  width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.content {
-  display: block;
-  width: 100%;
-  background-color: #d8f192;
-  min-height: 500px;
-  margin-top: 150px;
-}
-.content2{
-    display: block;
-    width: 100%;
-    background-color: #94b33e;
-    min-height: 500px;
-    margin-top: 150px;
-    margin-bottom: 150px;
-}
-h1{
-    text-align: center;
-    padding-top: 50px;
-    color: rgb(36, 23, 23);
-}
-.formelement{
-    text-align: center;
-    font-size:xx-large;
-    margin-top: 5px;
-    margin-bottom: 5px;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        body {
+            background-color:rgb(231, 222, 233);
+        }
+        .container {
+            width: 1080px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .box1{
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 500px; 
+        }
+        .content {
+            display: block;
+            width: 100%;
+            background-color: rgb(146, 214, 235);
+            margin-top: 50px;
+            min-height: 500px;
+        }
+        .content1 {
+          display: block;
+            width: 100%;
+            background-color: rgb(179, 125, 240);
+            margin-top: 30px;
+            min-height: 500px;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding-top: 20px;
+            font-size: 55px;
+        }
+        .formelement{
+            text-align: center;
+            padding-bottom: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 35px;
+        }
+        .footer{
+            text-align: right;
+            padding-right:20px;
+            color:white;
+            font-size: 35px
+        }
 
-}
     </style>
 </head>
 <body>
     <div class="container">
         <div class="content">
-            <h1>AREA OF RECTANGLE</h1>
-            <form>
-                <div class=formelement>
-                    <lable for="aedit">Length:</lable>
-                    <input type="text" id="aedit" value="0"/>
-                </div><br>
-                <div class=formelement>
-                    <lable for="bedit">Width:</lable>
-                    <input type="text" id="bedit" value="0"/>
-                </div><br>
-                <div class=formelement>
-                    <input type="button" value="AREA" id="calbutton"/>
-                </div><br>
-                <div class=formelement>
-                    <lable for="cedit">Area:</lable>
-                    <input type="text" id="cedit" readonly="0"/>
-                </div><br>
-                <div class=formelement>
-                    Formula is LENGTH*WIDTH
-                </div>
-            </form>
-        </div>
-        <script type="text/javascript">
-            var button;
-            button=document.querySelector("#calbutton");
-            button.addEventListener("click",function(){
-                var atext,btext,ctext;
-                var aval,bval,cval;
-                atext=document.querySelector("#aedit");
-                btext=document.querySelector("#bedit");
-                ctext=document.querySelector("#cedit");
-
-                aval=parseInt(atext.value);
-                bval=parseInt(btext.value);
-                cval=aval*bval
-                ctext.value=""+cval;
-            });
-        </script>
-        <div class="content2">
-            <h1>VOLUME OF RECTANGLE</h1>
-            <form>
-                <div class="formelement">
-                  <lable for="radiusedit">Length:</lable>
-                  <input type="text" id="lengthedit" value=" "/>
-                </div><br>
-                <div class="formelement">
-                  <lable for="heightedit">Height:</lable>
-                  <input type="text" id="heightedit" value=" "/>
-                </div><br>
-                <div class="formelement">
-                  <lable for="heightedit">Width:</lable>
-                  <input type="text" id="widthedit" value=" "/>
-                </div><br>
-                <div class="formelement">
-                  <input type="button" value="Volume" id="valbutton"/>
-                </div><br>
-                <div class="formelement">
-                  <lable for="volumeedit">VOLUME:</lable>
-                  <input type="text" id="volumeedit" readonly="0"/>
-                </div><br>
-                <div class="formelement">
-                Formula is:Length*Width*Height
-                </div><br>
-                
-            </form>
-    
+            <div class="box1">
+                <h1>Volume Of Cone</h1>
+                <form>
+                   <div class="formelement">
+                        <label for="aedit" >Radius =</label>
+                        <input type="text" id="aedit" value="0"/>Meters
+                        
+                    </div> 
+                    <div class="formelement">
+                        <label for="bedit">Height =</label>
+                        <input type="text" id="bedit" value="0" />Meters
+                        
+                    </div>
+                    <div class="formelement">
+                         <input type="button" value="CALCULATE VOLUME" id="addbutton"/>
+                    </div>
+                    <div class="formelement">
+                        <label for="cedit">Volume =</label>
+                        <input type="text" id="cedit" value="0" readonly />Meter<sup>3</sup>
+                        
+                    </div>
+                </form>
             </div>
+           
         </div>
-        <script type="text/javascript">
-          var button;
-          button=document.querySelector("#valbutton");
-          button.addEventListener("click",function(){
-            
-              var lengthtext,heighttext,widthtext,volumetext;
-              var lval,hval,wval,vval;
-    
-              lengthtext=document.querySelector("#lengthedit");
-              heighttext=document.querySelector("#heightedit");
-              widthtext=document.querySelector("#widthedit");
-              volumetext=document.querySelector("#volumeedit");
-      
-              lval=parseFloat(lengthtext.value)
-              hval=parseFloat(heighttext.value)
-              wval=parseFloat(widthtext.value)
-              vval=lval*hval*wval
+    </div>
+<script>
+    var button;
+    button=document.querySelector("#addbutton");
+    button.addEventListener("click",function(){
+        var atext,btext,ctext;
+        var aval,bval,cval;
+        var pi;
+        atext=document.querySelector("#aedit");
+        btext=document.querySelector("#bedit");
+        ctext=document.querySelector("#cedit");
 
-              volumetext.value=""+vval;
+        rexp=new RegExp("^[1-9]+[0-9]*$");
+     
+        aval=atext.value;
+        r1=aval.match(rexp);
+        bval=btext.value;
+        r2=bval.match(rexp)
+        pi=3.14;
         
-      
-            });
-      
-        </script>     
 
+        if(r1==null)
+        {
+            alert("Please Enter Positive Integers Only for Radius");
+        }
+        if(r2==null)
+        {
+            alert("Please Enter Positive Integers Only for Height");
+        }
+        
+        cval=pi*aval*aval*bval/3;
+        ctext.value=" "+cval;
     
+    });
+</script>   
+    <div class="container">
+        <div class="content1">
+            <div class="box1">
+                <h1>Area Of a Triangle</h1>
+                <form>
+                   <div class="formelement">
+                        <label for="dedit" >Base  =</label>
+                        <input type="text" id="dedit" value="0"/>Meters
+                    </div> 
+                    <div class="formelement">
+                        <label for="eedit">Height =</label>
+                        <input type="text" id="eedit" value="0"/>Meters
+                    </div>
+                    <div class="formelement">
+                         <input type="button" value="CALCULATE AREA" id="addbuttons"/>
+                    </div>
+                    <div class="formelement">
+                        <label for="fedit">Area =</label>
+                        <input type="text" id="fedit" value="0" readonly />Meter<sup>3</sup>
+                    </div>
+                    
+                </form>
+            </div>
+           
+        </div>
+        <div class="footer">
+            <p>Developed by Sithi hajara.I</p>
+        </div>
+    </div>
+
+<script>
+  var button;
+  button=document.querySelector("#addbuttons");
+  button.addEventListener("click",function(){
+      var dtext,etext,ftext;
+      var dval,eval,fval;
+ 
+      dtext=document.querySelector("#dedit");
+      etext=document.querySelector("#eedit");
+      ftext=document.querySelector("#fedit");
+
+      rexp=new RegExp("^[1-9]+[0-9]*$");
+
+      dval=dtext.value;
+      r3=dval.match(rexp);
+      eval=etext.value;
+      r4=eval.match(rexp)
+
+      if(r3==null)
+      {
+         alert("Please Enter Positive Integers Only for Base");
+      }
+      if(r4==null)
+      {
+         alert("Please Enter Positive Integers Only for Height");
+      }
+      fval=1/2*eval*dval;
+      ftext.value=" "+fval;
+  });
+  
+</script>    
+
+
 </body>
 </html>
 
@@ -190,6 +231,8 @@ h1{
 ```
 ![output](./ss1.PNG)
 ![output](./ss2.PNG)
+![output](./ss3.PNG)
+![output](./ss4.PNG)
 
 ## Result:
 
