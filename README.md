@@ -226,9 +226,9 @@ Publish the website in the given URL.
 
 </body>
 </html>
-
-## OUTPUT:
 ```
+## OUTPUT:
+
 ![output](./ss1.PNG)
 ![output](./ss2.PNG)
 ![output](./ss3.PNG)
